@@ -1,6 +1,6 @@
 <?php
 
-namespace Mprince\Shoppingcart\Facades;
+namespace Islamrumon\Shoppingcart\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

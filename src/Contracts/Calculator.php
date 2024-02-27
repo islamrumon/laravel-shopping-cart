@@ -1,8 +1,8 @@
 <?php
 
-namespace Mprince\Shoppingcart\Contracts;
+namespace Islamrumon\Shoppingcart\Contracts;
 
-use Mprince\Shoppingcart\CartItem;
+use Islamrumon\Shoppingcart\CartItem;
 
 interface Calculator
 {

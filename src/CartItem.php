@@ -1,11 +1,11 @@
 <?php
 
-namespace Mprince\Shoppingcart;
+namespace Islamrumon\Shoppingcart;
 
-use Mprince\Shoppingcart\Calculation\DefaultCalculator;
-use Mprince\Shoppingcart\Contracts\Buyable;
-use Mprince\Shoppingcart\Contracts\Calculator;
-use Mprince\Shoppingcart\Exceptions\InvalidCalculatorException;
+use Islamrumon\Shoppingcart\Calculation\DefaultCalculator;
+use Islamrumon\Shoppingcart\Contracts\Buyable;
+use Islamrumon\Shoppingcart\Contracts\Calculator;
+use Islamrumon\Shoppingcart\Exceptions\InvalidCalculatorException;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Support\Arr;
@@ -300,7 +300,7 @@ class CartItem implements Arrayable, Jsonable
     /**
      * Update the cart item from a Buyable.
      *
-     * @param \Mprince\Shoppingcart\Contracts\Buyable $item
+     * @param \Islamrumon\Shoppingcart\Contracts\Buyable $item
      *
      * @return void
      */
@@ -335,7 +335,7 @@ class CartItem implements Arrayable, Jsonable
      *
      * @param mixed $model
      *
-     * @return \Mprince\Shoppingcart\CartItem
+     * @return \Islamrumon\Shoppingcart\CartItem
      */
     public function associate($model)
     {
@@ -349,7 +349,7 @@ class CartItem implements Arrayable, Jsonable
      *
      * @param int|float $taxRate
      *
-     * @return \Mprince\Shoppingcart\CartItem
+     * @return \Islamrumon\Shoppingcart\CartItem
      */
     public function setTaxRate($taxRate)
     {
@@ -363,7 +363,7 @@ class CartItem implements Arrayable, Jsonable
      *
      * @param int|float $discountRate
      *
-     * @return \Mprince\Shoppingcart\CartItem
+     * @return \Islamrumon\Shoppingcart\CartItem
      */
     public function setDiscountRate($discountRate)
     {
@@ -412,10 +412,10 @@ class CartItem implements Arrayable, Jsonable
     /**
      * Create a new instance from a Buyable.
      *
-     * @param \Mprince\Shoppingcart\Contracts\Buyable $item
+     * @param \Islamrumon\Shoppingcart\Contracts\Buyable $item
      * @param array                                      $options
      *
-     * @return \Mprince\Shoppingcart\CartItem
+     * @return \Islamrumon\Shoppingcart\CartItem
      */
     public static function fromBuyable(Buyable $item, array $options = [])
     {
@@ -427,7 +427,7 @@ class CartItem implements Arrayable, Jsonable
      *
      * @param array $attributes
      *
-     * @return \Mprince\Shoppingcart\CartItem
+     * @return \Islamrumon\Shoppingcart\CartItem
      */
     public static function fromArray(array $attributes)
     {
@@ -444,7 +444,7 @@ class CartItem implements Arrayable, Jsonable
      * @param float      $price
      * @param array      $options
      *
-     * @return \Mprince\Shoppingcart\CartItem
+     * @return \Islamrumon\Shoppingcart\CartItem
      */
     public static function fromAttributes($id, $name, $price, $weight, array $options = [])
     {

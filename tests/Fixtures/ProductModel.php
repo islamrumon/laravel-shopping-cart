@@ -1,6 +1,6 @@
 <?php
 
-namespace Mprince\Tests\Shoppingcart\Fixtures;
+namespace Islamrumon\Tests\Shoppingcart\Fixtures;
 
 class ProductModel
 {

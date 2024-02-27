@@ -1,17 +1,17 @@
 ## LaravelShoppingcart
-![CI Code Checks](https://github.com/mprince/LaravelShoppingcart/workflows/CI%20Code%20Checks/badge.svg?branch=master)
-[![codecov](https://codecov.io/gh/mprince/LaravelShoppingcart/branch/master/graph/badge.svg)](https://codecov.io/gh/mprince/LaravelShoppingcart)
+![CI Code Checks](https://github.com/Islamrumon/LaravelShoppingcart/workflows/CI%20Code%20Checks/badge.svg?branch=master)
+[![codecov](https://codecov.io/gh/Islamrumon/LaravelShoppingcart/branch/master/graph/badge.svg)](https://codecov.io/gh/Islamrumon/LaravelShoppingcart)
 [![StyleCI](https://styleci.io/repos/152610878/shield?branch=master)](https://styleci.io/repos/152610878)
-[![Total Downloads](https://poser.pugx.org/mprince/shoppingcart/downloads.png)](https://packagist.org/packages/mprince/shoppingcart)
-[![Latest Stable Version](https://poser.pugx.org/mprince/shoppingcart/v/stable)](https://packagist.org/packages/mprince/shoppingcart)
-[![Latest Unstable Version](https://poser.pugx.org/mprince/shoppingcart/v/unstable)](https://packagist.org/packages/mprince/shoppingcart)
-[![License](https://poser.pugx.org/mprince/shoppingcart/license)](https://packagist.org/packages/mprince/shoppingcart)
+[![Total Downloads](https://poser.pugx.org/Islamrumon/shoppingcart/downloads.png)](https://packagist.org/packages/Islamrumon/shoppingcart)
+[![Latest Stable Version](https://poser.pugx.org/Islamrumon/shoppingcart/v/stable)](https://packagist.org/packages/Islamrumon/shoppingcart)
+[![Latest Unstable Version](https://poser.pugx.org/Islamrumon/shoppingcart/v/unstable)](https://packagist.org/packages/Islamrumon/shoppingcart)
+[![License](https://poser.pugx.org/Islamrumon/shoppingcart/license)](https://packagist.org/packages/Islamrumon/shoppingcart)
 
 Ini adalah percabangan dari [Crinsane's LaravelShoppingcart](https://github.com/Crinsane/LaravelShoppingcart) dikembangkan dengan fitur-fitur minor yang kompatibel dengan Laravel 6
 
 ## Instalasi
 
-Install paket(https://packagist.org/packages/mprince/shoppingcart) menggunakan [Composer](http://getcomposer.org/). 
+Install paket(https://packagist.org/packages/Islamrumon/shoppingcart) menggunakan [Composer](http://getcomposer.org/). 
 
 Jalankan Composer dengan menggunakan perintah berikut:
 
@@ -336,11 +336,11 @@ Untuk kenyamanan menambahkan item yang lebih cepat ke troli dan asosiasi otomati
 <?php
 namespace App\Models;
 
-use Mprince\Shoppingcart\Contracts\Buyable;
+use Islamrumon\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable {
-    use Mprince\Shoppingcart\CanBeBought;
+    use Islamrumon\Shoppingcart\CanBeBought;
 }
 ```
 
@@ -367,7 +367,7 @@ Contoh:
 <?php
 namespace App\Models;
 
-use Mprince\Shoppingcart\Contracts\Buyable;
+use Islamrumon\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable {
@@ -433,7 +433,7 @@ Anda juga dapat menggunakan Kontrak `InstanceIdentifier` untuk memperpanjang Mod
 namespace App;
 ...
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Mprince\Shoppingcart\Contracts\InstanceIdentifier;
+use Islamrumon\Shoppingcart\Contracts\InstanceIdentifier;
 
 class User extends Authenticatable implements InstanceIdentifier
 {
@@ -514,13 +514,13 @@ Untuk menyimpan keranjang ke dalam basis data sehingga Anda dapat mengambilnya n
 Secara default paket akan menggunakan koneksi database default dan menggunakan tabel bernama `shoppingcart`.
 Jika Anda ingin mengubah opsi ini, Anda harus menerbitkan file `config`.
 
-    php artisan vendor:publish --provider="Mprince\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
+    php artisan vendor:publish --provider="Islamrumon\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
 
 Ini akan memberi Anda file konfigurasi `cart.php` di mana Anda dapat melakukan perubahan.
 
 Untuk memudahkan hidup Anda, paket ini juga menyertakan `migration` yang siap digunakan yang dapat Anda terbitkan dengan menjalankan:
 
-    php artisan vendor:publish --provider="Mprince\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
+    php artisan vendor:publish --provider="Islamrumon\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
     
 Ini akan menempatkan file migrasi tabel `shoppingcart` ke direktori` database / migrations`. Sekarang yang harus Anda lakukan adalah menjalankan `php artisan migrate` untuk memigrasi basis data Anda.
 

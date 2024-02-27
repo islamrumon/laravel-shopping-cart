@@ -1,6 +1,6 @@
 <?php
 
-namespace Mprince\Shoppingcart;
+namespace Islamrumon\Shoppingcart;
 
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Session\SessionManager;
@@ -15,7 +15,7 @@ class ShoppingcartServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('cart', 'Mprince\Shoppingcart\Cart');
+        $this->app->bind('cart', 'Islamrumon\Shoppingcart\Cart');
 
         $config = __DIR__.'/Config/cart.php';
         $this->mergeConfigFrom($config, 'cart');

@@ -1,16 +1,16 @@
 <?php
 
-namespace Mprince\Tests\Shoppingcart;
+namespace Islamrumon\Tests\Shoppingcart;
 
 use Carbon\Carbon;
-use Mprince\Shoppingcart\Calculation\GrossPrice;
-use Mprince\Shoppingcart\Cart;
-use Mprince\Shoppingcart\CartItem;
-use Mprince\Shoppingcart\ShoppingcartServiceProvider;
-use Mprince\Tests\Shoppingcart\Fixtures\BuyableProduct;
-use Mprince\Tests\Shoppingcart\Fixtures\BuyableProductTrait;
-use Mprince\Tests\Shoppingcart\Fixtures\Identifiable;
-use Mprince\Tests\Shoppingcart\Fixtures\ProductModel;
+use Islamrumon\Shoppingcart\Calculation\GrossPrice;
+use Islamrumon\Shoppingcart\Cart;
+use Islamrumon\Shoppingcart\CartItem;
+use Islamrumon\Shoppingcart\ShoppingcartServiceProvider;
+use Islamrumon\Tests\Shoppingcart\Fixtures\BuyableProduct;
+use Islamrumon\Tests\Shoppingcart\Fixtures\BuyableProductTrait;
+use Islamrumon\Tests\Shoppingcart\Fixtures\Identifiable;
+use Islamrumon\Tests\Shoppingcart\Fixtures\ProductModel;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Session\SessionManager;
 use Illuminate\Support\Collection;
@@ -385,7 +385,7 @@ class CartTest extends TestCase
      */
     public function it_will_throw_an_exception_if_a_rowid_was_not_found()
     {
-        $this->expectException(\Mprince\Shoppingcart\Exceptions\InvalidRowIDException::class);
+        $this->expectException(\Islamrumon\Shoppingcart\Exceptions\InvalidRowIDException::class);
 
         $cart = $this->getCart();
 
@@ -722,7 +722,7 @@ class CartTest extends TestCase
      */
     public function it_will_throw_an_exception_when_a_non_existing_model_is_being_associated()
     {
-        $this->expectException(\Mprince\Shoppingcart\Exceptions\UnknownModelException::class);
+        $this->expectException(\Islamrumon\Shoppingcart\Exceptions\UnknownModelException::class);
         $this->expectExceptionMessage('The supplied model SomeModel does not exist.');
 
         $cart = $this->getCart();
@@ -1022,7 +1022,7 @@ class CartTest extends TestCase
      */
     public function it_will_throw_an_exception_when_a_cart_was_already_stored_using_the_specified_identifier()
     {
-        $this->expectException(\Mprince\Shoppingcart\Exceptions\CartAlreadyStoredException::class);
+        $this->expectException(\Islamrumon\Shoppingcart\Exceptions\CartAlreadyStoredException::class);
         $this->expectExceptionMessage('A cart with identifier 123 was already stored.');
 
         $this->artisan('migrate', [
@@ -1431,7 +1431,7 @@ class CartTest extends TestCase
     /** @test */
     public function it_does_allow_adding_cart_items_with_weight_and_options()
     {
-        // https://github.com/mprince/LaravelShoppingcart/pull/5
+        // https://github.com/Islamrumon/LaravelShoppingcart/pull/5
         $cart = $this->getCart();
 
         $cartItem = $cart->add('293ad', 'Product 1', 1, 9.99, 550, ['size' => 'large']);
@@ -1595,7 +1595,7 @@ class CartTest extends TestCase
     /**
      * Get an instance of the cart.
      *
-     * @return \Mprince\Shoppingcart\Cart
+     * @return \Islamrumon\Shoppingcart\Cart
      */
     private function getCart()
     {
@@ -1610,7 +1610,7 @@ class CartTest extends TestCase
      *
      * @param int $discount
      *
-     * @return \Mprince\Shoppingcart\Cart
+     * @return \Islamrumon\Shoppingcart\Cart
      */
     private function getCartDiscount($discount = 50)
     {

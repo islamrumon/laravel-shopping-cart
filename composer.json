@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "islamrumon\\Shoppingcart\\": "src/"
+            "Islamrumon\\Shoppingcart\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "islamrumon\\Tests\\Shoppingcart\\": "tests/"
+            "Islamrumon\\Tests\\Shoppingcart\\": "tests/"
         }
     },
     "suggest": {
@@ -42,10 +42,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "islamrumon\\Shoppingcart\\ShoppingcartServiceProvider"
+                "Islamrumon\\Shoppingcart\\ShoppingcartServiceProvider"
             ],
             "aliases": {
-                "Cart": "islamrumon\\Shoppingcart\\Facades\\Cart"
+                "Cart": "Islamrumon\\Shoppingcart\\Facades\\Cart"
             }
         }
     }

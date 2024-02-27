@@ -1,9 +1,9 @@
 <?php
 
-namespace Mprince\Shoppingcart\Calculation;
+namespace Islamrumon\Shoppingcart\Calculation;
 
-use Mprince\Shoppingcart\CartItem;
-use Mprince\Shoppingcart\Contracts\Calculator;
+use Islamrumon\Shoppingcart\CartItem;
+use Islamrumon\Shoppingcart\Contracts\Calculator;
 
 class GrossPrice implements Calculator
 {

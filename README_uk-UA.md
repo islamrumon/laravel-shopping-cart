@@ -1,21 +1,21 @@
 ## LaravelShoppingcart
-![CI Code Checks](https://github.com/mprince/LaravelShoppingcart/workflows/CI%20Code%20Checks/badge.svg?branch=master)
-[![codecov](https://codecov.io/gh/mprince/LaravelShoppingcart/branch/master/graph/badge.svg)](https://codecov.io/gh/mprince/LaravelShoppingcart)
+![CI Code Checks](https://github.com/Islamrumon/LaravelShoppingcart/workflows/CI%20Code%20Checks/badge.svg?branch=master)
+[![codecov](https://codecov.io/gh/Islamrumon/LaravelShoppingcart/branch/master/graph/badge.svg)](https://codecov.io/gh/Islamrumon/LaravelShoppingcart)
 [![StyleCI](https://styleci.io/repos/152610878/shield?branch=master)](https://styleci.io/repos/152610878)
-[![Total Downloads](https://poser.pugx.org/mprince/shoppingcart/downloads.png)](https://packagist.org/packages/mprince/shoppingcart)
-[![Latest Stable Version](https://poser.pugx.org/mprince/shoppingcart/v/stable)](https://packagist.org/packages/mprince/shoppingcart)
-[![Latest Unstable Version](https://poser.pugx.org/mprince/shoppingcart/v/unstable)](https://packagist.org/packages/mprince/shoppingcart)
-[![License](https://poser.pugx.org/mprince/shoppingcart/license)](https://packagist.org/packages/mprince/shoppingcart)
+[![Total Downloads](https://poser.pugx.org/Islamrumon/shoppingcart/downloads.png)](https://packagist.org/packages/Islamrumon/shoppingcart)
+[![Latest Stable Version](https://poser.pugx.org/Islamrumon/shoppingcart/v/stable)](https://packagist.org/packages/Islamrumon/shoppingcart)
+[![Latest Unstable Version](https://poser.pugx.org/Islamrumon/shoppingcart/v/unstable)](https://packagist.org/packages/Islamrumon/shoppingcart)
+[![License](https://poser.pugx.org/Islamrumon/shoppingcart/license)](https://packagist.org/packages/Islamrumon/shoppingcart)
 
 Цей репозиторій є відгалуженням [Crinsane's LaravelShoppingcart](https://github.com/Crinsane/LaravelShoppingcart) та містить додаткові незначні доповнення, сумісні з Laravel 6.
 
 ## Встановлення
 
-Встановіть [пакет](https://packagist.org/packages/mprince/shoppingcart) скориставшись [Завантажувачем](http://getcomposer.org/). 
+Встановіть [пакет](https://packagist.org/packages/Islamrumon/shoppingcart) скориставшись [Завантажувачем](http://getcomposer.org/). 
 
 Для запуску Завантажувача, скористайтеся командою у Терміналі:
 
-    composer require mprince/shoppingcart
+    composer require Islamrumon/shoppingcart
 
 Тепер ви готові розпочати користуватися кошиком у вашому застосунку.
 
@@ -334,11 +334,11 @@ $cart->setDiscount($rowId, 21);
 <?php
 namespace App\Models;
 
-use Mprince\Shoppingcart\Contracts\Buyable;
+use Islamrumon\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable {
-    use Mprince\Shoppingcart\CanBeBought;
+    use Islamrumon\Shoppingcart\CanBeBought;
 }
 ```
 
@@ -365,7 +365,7 @@ class Product extends Model implements Buyable {
 <?php
 namespace App\Models;
 
-use Mprince\Shoppingcart\Contracts\Buyable;
+use Islamrumon\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable {
@@ -431,7 +431,7 @@ Cart::instance('wishlist')->count();
 namespace App;
 ...
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Mprince\Shoppingcart\Contracts\InstanceIdentifier;
+use Islamrumon\Shoppingcart\Contracts\InstanceIdentifier;
 
 class User extends Authenticatable implements InstanceIdentifier
 {
@@ -512,13 +512,13 @@ foreach(Cart::content() as $row) {
 За замовчуванням, пакет використовуватиме підключення до бази даних, яке вказане за замовчуванням, та використовуватиме таблицію `shoppingcart`.
 Якщо ви хочете змінити ці значення, вам потрібно буде опублікувати файл з конфігураціями `config`.
 
-    php artisan vendor:publish --provider="Mprince\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
+    php artisan vendor:publish --provider="Islamrumon\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
 
 Така дія створить вам файл з конфігураціями `cart.php`, в якому ви можете внести бажані зміни.
 
 Щоб спростити ваше життя, пакет також включає готову до вжитку `migration`, яку можна опублікувати через запуск наступної команди:
 
-    php artisan vendor:publish --provider="Mprince\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
+    php artisan vendor:publish --provider="Islamrumon\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
     
 Така дія розмістить файл з міграцією таблиці `shoppingcart` в директорію `database/migrations`. Все що вам залишається зробити, це запустити `php artisan migrate` для міграції вашої бази даних.
 

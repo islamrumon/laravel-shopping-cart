@@ -1,9 +1,9 @@
 <?php
 
-namespace Mprince\Tests\Shoppingcart;
+namespace Islamrumon\Tests\Shoppingcart;
 
-use Mprince\Shoppingcart\CartItem;
-use Mprince\Shoppingcart\ShoppingcartServiceProvider;
+use Islamrumon\Shoppingcart\CartItem;
+use Islamrumon\Shoppingcart\ShoppingcartServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 class CartItemTest extends TestCase

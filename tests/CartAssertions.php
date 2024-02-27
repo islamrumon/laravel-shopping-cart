@@ -1,8 +1,8 @@
 <?php
 
-namespace Mprince\Tests\Shoppingcart;
+namespace Islamrumon\Tests\Shoppingcart;
 
-use Mprince\Shoppingcart\Cart;
+use Islamrumon\Shoppingcart\Cart;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 trait CartAssertions
@@ -11,7 +11,7 @@ trait CartAssertions
      * Assert that the cart contains the given number of items.
      *
      * @param int|float                     $items
-     * @param \Mprince\Shoppingcart\Cart $cart
+     * @param \Islamrumon\Shoppingcart\Cart $cart
      */
     public function assertItemsInCart($items, Cart $cart)
     {
@@ -24,7 +24,7 @@ trait CartAssertions
      * Assert that the cart contains the given number of rows.
      *
      * @param int                           $rows
-     * @param \Mprince\Shoppingcart\Cart $cart
+     * @param \Islamrumon\Shoppingcart\Cart $cart
      */
     public function assertRowsInCart($rows, Cart $cart)
     {

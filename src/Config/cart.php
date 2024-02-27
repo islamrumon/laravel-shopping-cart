@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'calculator' => \Mprince\Shoppingcart\Calculation\DefaultCalculator::class,
+    'calculator' => \Islamrumon\Shoppingcart\Calculation\DefaultCalculator::class,
 
     /*
     |--------------------------------------------------------------------------

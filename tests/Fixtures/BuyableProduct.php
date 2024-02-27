@@ -1,8 +1,8 @@
 <?php
 
-namespace Mprince\Tests\Shoppingcart\Fixtures;
+namespace Islamrumon\Tests\Shoppingcart\Fixtures;
 
-use Mprince\Shoppingcart\Contracts\Buyable;
+use Islamrumon\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class BuyableProduct extends Model implements Buyable

@@ -1,8 +1,8 @@
 <?php
 
-namespace Mprince\Tests\Shoppingcart\Fixtures;
+namespace Islamrumon\Tests\Shoppingcart\Fixtures;
 
-use Mprince\Shoppingcart\Contracts\InstanceIdentifier;
+use Islamrumon\Shoppingcart\Contracts\InstanceIdentifier;
 
 class Identifiable implements InstanceIdentifier
 {

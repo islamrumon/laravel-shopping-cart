@@ -1,14 +1,14 @@
 <?php
 
-namespace Mprince\Shoppingcart;
+namespace Islamrumon\Shoppingcart;
 
 use Carbon\Carbon;
 use Closure;
-use Mprince\Shoppingcart\Contracts\Buyable;
-use Mprince\Shoppingcart\Contracts\InstanceIdentifier;
-use Mprince\Shoppingcart\Exceptions\CartAlreadyStoredException;
-use Mprince\Shoppingcart\Exceptions\InvalidRowIDException;
-use Mprince\Shoppingcart\Exceptions\UnknownModelException;
+use Islamrumon\Shoppingcart\Contracts\Buyable;
+use Islamrumon\Shoppingcart\Contracts\InstanceIdentifier;
+use Islamrumon\Shoppingcart\Exceptions\CartAlreadyStoredException;
+use Islamrumon\Shoppingcart\Exceptions\InvalidRowIDException;
+use Islamrumon\Shoppingcart\Exceptions\UnknownModelException;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Session\SessionManager;
@@ -90,7 +90,7 @@ class Cart
      *
      * @param string|null $instance
      *
-     * @return \Mprince\Shoppingcart\Cart
+     * @return \Islamrumon\Shoppingcart\Cart
      */
     public function instance($instance = null)
     {
@@ -126,7 +126,7 @@ class Cart
      * @param float     $weight
      * @param array     $options
      *
-     * @return \Mprince\Shoppingcart\CartItem
+     * @return \Islamrumon\Shoppingcart\CartItem
      */
     public function add($id, $name = null, $qty = null, $price = null, $weight = 0, array $options = [])
     {
@@ -144,12 +144,12 @@ class Cart
     /**
      * Add an item to the cart.
      *
-     * @param \Mprince\Shoppingcart\CartItem $item          Item to add to the Cart
+     * @param \Islamrumon\Shoppingcart\CartItem $item          Item to add to the Cart
      * @param bool                              $keepDiscount  Keep the discount rate of the Item
      * @param bool                              $keepTax       Keep the Tax rate of the Item
      * @param bool                              $dispatchEvent
      *
-     * @return \Mprince\Shoppingcart\CartItem The CartItem
+     * @return \Islamrumon\Shoppingcart\CartItem The CartItem
      */
     public function addCartItem($item, $keepDiscount = false, $keepTax = false, $dispatchEvent = true)
     {
@@ -188,7 +188,7 @@ class Cart
      * @param string $rowId
      * @param mixed  $qty
      *
-     * @return \Mprince\Shoppingcart\CartItem
+     * @return \Islamrumon\Shoppingcart\CartItem
      */
     public function update($rowId, $qty)
     {
@@ -265,7 +265,7 @@ class Cart
      *
      * @param string $rowId
      *
-     * @return \Mprince\Shoppingcart\CartItem
+     * @return \Islamrumon\Shoppingcart\CartItem
      */
     public function get($rowId)
     {
@@ -797,7 +797,7 @@ class Cart
      * @param float     $weight
      * @param array     $options
      *
-     * @return \Mprince\Shoppingcart\CartItem
+     * @return \Islamrumon\Shoppingcart\CartItem
      */
     private function createCartItem($id, $name, $qty, $price, $weight, array $options)
     {

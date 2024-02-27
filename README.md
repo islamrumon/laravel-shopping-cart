@@ -1,20 +1,20 @@
 ## LaravelShoppingcart
 
 [![StyleCI](https://styleci.io/repos/152610878/shield?branch=master)](https://styleci.io/repos/152610878)
-[![Total Downloads](https://poser.pugx.org/mprince/laravelshoppingcart/downloads.png)](https://packagist.org/packages/mprince/laravelshoppingcart)
-[![Latest Stable Version](https://poser.pugx.org/mprince/laravelshoppingcart/v/stable)](https://packagist.org/packages/mprince/laravelshoppingcart)
-[![Latest Unstable Version](https://poser.pugx.org/mprince/laravelshoppingcart/v/unstable)](https://packagist.org/packages/mprince/laravelshoppingcart)
-[![License](https://poser.pugx.org/mprince/laravelshoppingcart/license)](https://packagist.org/packages/mprince/laravelshoppingcart)
+[![Total Downloads](https://poser.pugx.org/Islamrumon/laravelshoppingcart/downloads.png)](https://packagist.org/packages/Islamrumon/laravelshoppingcart)
+[![Latest Stable Version](https://poser.pugx.org/Islamrumon/laravelshoppingcart/v/stable)](https://packagist.org/packages/Islamrumon/laravelshoppingcart)
+[![Latest Unstable Version](https://poser.pugx.org/Islamrumon/laravelshoppingcart/v/unstable)](https://packagist.org/packages/Islamrumon/laravelshoppingcart)
+[![License](https://poser.pugx.org/Islamrumon/laravelshoppingcart/license)](https://packagist.org/packages/Islamrumon/laravelshoppingcart)
 
-This is a fork of [Crinsane's LaravelShoppingcart](https://github.com/Crinsane/LaravelShoppingcart) extended with minor features compatible with Laravel 7+. An example integration can be [found here](https://github.com/mprince/LaravelShoppingcartDemo).
+This is a fork of [Crinsane's LaravelShoppingcart](https://github.com/Crinsane/LaravelShoppingcart) extended with minor features compatible with Laravel 7+. An example integration can be [found here](https://github.com/Islamrumon/LaravelShoppingcartDemo).
 
 ## Installation
 
-Install the [package](https://packagist.org/packages/mprince/laravelshoppingcart) through [Composer](http://getcomposer.org/). 
+Install the [package](https://packagist.org/packages/Islamrumon/laravelshoppingcart) through [Composer](http://getcomposer.org/). 
 
 Run the Composer require command from the Terminal:
 
-    composer require islamrumon/laravelshoppingcart
+    composer require Islamrumon/laravelshoppingcart
 
 Now you're ready to start using the shoppingcart in your application.
 
@@ -22,7 +22,7 @@ Now you're ready to start using the shoppingcart in your application.
 
 You definitely should publish the `config` file and take a look at it.
 
-    php artisan vendor:publish --provider="islamrumon\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
+    php artisan vendor:publish --provider="Islamrumon\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
 
 This will give you a `cart.php` config file in which you can make changes to the packages behaivor.
 
@@ -379,11 +379,11 @@ For the convenience of faster adding items to cart and their automatic associati
 <?php
 namespace App\Models;
 
-use islamrumon\Shoppingcart\Contracts\Buyable;
+use Islamrumon\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable {
-    use islamrumon\Shoppingcart\CanBeBought;
+    use Islamrumon\Shoppingcart\CanBeBought;
 }
 ```
 
@@ -410,7 +410,7 @@ Example:
 <?php
 namespace App\Models;
 
-use islamrumon\Shoppingcart\Contracts\Buyable;
+use Islamrumon\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable {
@@ -479,7 +479,7 @@ You can also use the `InstanceIdentifier` Contract to extend a desired Model to 
 namespace App;
 ...
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use islamrumon\Shoppingcart\Contracts\InstanceIdentifier;
+use Islamrumon\Shoppingcart\Contracts\InstanceIdentifier;
 
 class User extends Authenticatable implements InstanceIdentifier
 {
@@ -561,7 +561,7 @@ By default the package will use the default database connection and use a table 
 
 To make your life easy, the package also includes a ready to use `migration` which you can publish by running:
 
-    php artisan vendor:publish --provider="islamrumon\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
+    php artisan vendor:publish --provider="Islamrumon\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
     
 This will place a `shoppingcart` table's migration file into `database/migrations` directory. Now all you have to do is run `php artisan migrate` to migrate your database.
 
@@ -597,14 +597,14 @@ If you want to erase the cart from the database, all you have to do is call the 
 
 ## Calculators
 
-The calculation logic for the package is implemented and defined in `Calculator` classes. These implement the `Mprince\Shoppingcart\Contracts\Calculator` Contract and and determine how the prices are calculated and rounded. The calculators can be configured in the confugration file. This is the default calculator:
+The calculation logic for the package is implemented and defined in `Calculator` classes. These implement the `Islamrumon\Shoppingcart\Contracts\Calculator` Contract and and determine how the prices are calculated and rounded. The calculators can be configured in the confugration file. This is the default calculator:
 ```php
 <?php
 
-namespace islamrumon\Shoppingcart\Calculation;
+namespace Islamrumon\Shoppingcart\Calculation;
 
-use islamrumon\Shoppingcart\CartItem;
-use islamrumon\Shoppingcart\Contracts\Calculator;
+use Islamrumon\Shoppingcart\CartItem;
+use Islamrumon\Shoppingcart\Contracts\Calculator;
 
 class DefaultCalculator implements Calculator
 {
@@ -731,8 +731,8 @@ Cart::add('1239ad0', 'Product 2', 2, 5.95, ['size' => 'large']);
 <table>
 <tr>
     <td align="center">
-        <a href="https://github.com/mprince">
-            <img src="https://avatars.githubusercontent.com/u/4533331?v=4" width="100;" alt="mprince"/>
+        <a href="https://github.com/Islamrumon">
+            <img src="https://avatars.githubusercontent.com/u/4533331?v=4" width="100;" alt="Islamrumon"/>
             <br />
             <sub><b>Patrick</b></sub>
         </a>
@@ -752,8 +752,8 @@ Cart::add('1239ad0', 'Product 2', 2, 5.95, ['size' => 'large']);
 <table>
 <tr>
     <td align="center">
-        <a href="https://github.com/mprince">
-            <img src="https://avatars.githubusercontent.com/u/4533331?v=4" width="100;" alt="mprince"/>
+        <a href="https://github.com/Islamrumon">
+            <img src="https://avatars.githubusercontent.com/u/4533331?v=4" width="100;" alt="Islamrumon"/>
             <br />
             <sub><b>Patrick</b></sub>
         </a>
@@ -762,7 +762,7 @@ Cart::add('1239ad0', 'Product 2', 2, 5.95, ['size' => 'large']);
         <a href="https://github.com/Crinsane">
             <img src="https://avatars.githubusercontent.com/u/1297781?v=4" width="100;" alt="Crinsane"/>
             <br />
-            <sub><b>Rob Mprince</b></sub>
+            <sub><b>Rob Islamrumon</b></sub>
         </a>
     </td>
     <td align="center">

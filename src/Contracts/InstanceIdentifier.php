@@ -1,6 +1,6 @@
 <?php
 
-namespace Mprince\Shoppingcart\Contracts;
+namespace Islamrumon\Shoppingcart\Contracts;
 
 interface InstanceIdentifier
 {
