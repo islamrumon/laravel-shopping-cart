@@ -14,7 +14,7 @@ Install the [package](https://packagist.org/packages/mprince/laravelshoppingcart
 
 Run the Composer require command from the Terminal:
 
-    composer require mprince/laravelshoppingcart
+    composer require islamrumon/laravelshoppingcart
 
 Now you're ready to start using the shoppingcart in your application.
 
@@ -22,7 +22,7 @@ Now you're ready to start using the shoppingcart in your application.
 
 You definitely should publish the `config` file and take a look at it.
 
-    php artisan vendor:publish --provider="Mprince\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
+    php artisan vendor:publish --provider="islamrumon\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
 
 This will give you a `cart.php` config file in which you can make changes to the packages behaivor.
 
@@ -379,11 +379,11 @@ For the convenience of faster adding items to cart and their automatic associati
 <?php
 namespace App\Models;
 
-use Mprince\Shoppingcart\Contracts\Buyable;
+use islamrumon\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable {
-    use Mprince\Shoppingcart\CanBeBought;
+    use islamrumon\Shoppingcart\CanBeBought;
 }
 ```
 
@@ -410,7 +410,7 @@ Example:
 <?php
 namespace App\Models;
 
-use Mprince\Shoppingcart\Contracts\Buyable;
+use islamrumon\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable {
@@ -479,7 +479,7 @@ You can also use the `InstanceIdentifier` Contract to extend a desired Model to 
 namespace App;
 ...
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Mprince\Shoppingcart\Contracts\InstanceIdentifier;
+use islamrumon\Shoppingcart\Contracts\InstanceIdentifier;
 
 class User extends Authenticatable implements InstanceIdentifier
 {
@@ -561,7 +561,7 @@ By default the package will use the default database connection and use a table 
 
 To make your life easy, the package also includes a ready to use `migration` which you can publish by running:
 
-    php artisan vendor:publish --provider="Mprince\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
+    php artisan vendor:publish --provider="islamrumon\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
     
 This will place a `shoppingcart` table's migration file into `database/migrations` directory. Now all you have to do is run `php artisan migrate` to migrate your database.
 
@@ -601,10 +601,10 @@ The calculation logic for the package is implemented and defined in `Calculator`
 ```php
 <?php
 
-namespace Mprince\Shoppingcart\Calculation;
+namespace islamrumon\Shoppingcart\Calculation;
 
-use Mprince\Shoppingcart\CartItem;
-use Mprince\Shoppingcart\Contracts\Calculator;
+use islamrumon\Shoppingcart\CartItem;
+use islamrumon\Shoppingcart\Contracts\Calculator;
 
 class DefaultCalculator implements Calculator
 {

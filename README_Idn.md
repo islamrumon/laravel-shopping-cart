@@ -15,7 +15,7 @@ Install paket(https://packagist.org/packages/mprince/shoppingcart) menggunakan [
 
 Jalankan Composer dengan menggunakan perintah berikut:
 
-    composer require mprince/shoppingcart
+    composer require islamrumon/shoppingcart
 
 Sekarang Anda siap untuk mulai menggunakan shoppingcart di aplikasi Anda.
 
